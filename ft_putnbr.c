@@ -1,20 +1,17 @@
 #include "ft_printf.h"
 
-
-int ft_putnbr(long int nb)
+int ft_putnbr(int nb)
 {
-    if(nb < 0)
+    int count;
+    count = 0;
+    long int n =(long int)nb;
+    if(n < 0)
     {
-        ft_putchar('-'); 
-        nb *= -nb;
+        count +=ft_putchar('-'); 
+        n = -n;
     }
-    if (nb > 9)
-	ft_putnbr(nb / 10);
-	ft_putchar((nb % 10) + '0');
-		return (0);
+    if (n > 9)
+	count +=ft_putnbr(n / 10);
+	count +=ft_putchar((n % 10) + '0');
+		return (count);
 }
-
-// int main()
-// {
-// 	ft_putnbr(42);
-// }

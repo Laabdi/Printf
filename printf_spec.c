@@ -16,10 +16,12 @@ int printf_spec(va_list arg, char c)
         count +=ft_print_upperhexa(va_arg(arg,unsigned int));
         else if(c == 'p')
         count +=ft_print_addresse(va_arg(arg,void *));
-        else if (c == 'd' || c == 'i')
-        count +=ft_putnbr((long)va_arg(arg,int));
+        else if (c == 'd')
+         count +=ft_putnbr(va_arg(arg,int));
+        else if( c == 'i')
+        count +=ft_putnbr(va_arg(arg,int));
         else if( c == 'u')
-        count +=ft_uputnbr((long)va_arg(arg,unsigned int));
+        count +=ft_uputnbr(va_arg(arg,unsigned int));
         return (count);
 
 }

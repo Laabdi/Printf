@@ -10,7 +10,7 @@ int ft_putchar(char c);
 int ft_print_lowhexa(unsigned int nb);
 int ft_print_upperhexa(unsigned int nb);
 int ft_printf(const char *format, ...);
-int ft_putnbr(long int nb);
+int ft_putnbr(int nb);
 int ft_putstr(char *s);
 int ft_uputnbr(unsigned int nb);
 int printf_spec(va_list arg, char c);

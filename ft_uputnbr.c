@@ -2,8 +2,9 @@
 
 int ft_uputnbr(unsigned int nb)
 {
+	int count = 0;
     if (nb > 9)
-	ft_uputnbr(nb / 10);
-	ft_putchar((nb % 10) + '0');
-		return (0);
+	count +=ft_uputnbr(nb / 10);
+	count +=ft_putchar((nb % 10) + '0');
+		return (count);
 }
